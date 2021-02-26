@@ -6,16 +6,17 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get('/users/:id/:firstName/:lastName', function(req, res, next) {
-});
-
-
-router.get('/john', function(req, res, next) {
-  console.log(req.query)
+router.get('/:id/:firstName/:lastName', function(req, res, next) {
   console.log(req.params)
-  console.log(req.body)
-  res.json({firstName: 'John'});  
+  res.send('yay')
 });
+
+
+// router.get('/john', function(req, res, next) {
+//   console.log(req.query)
+//   console.log(req.params)
+//   console.log(req.body)
+// });
 
 module.exports = router;
 
