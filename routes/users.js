@@ -6,11 +6,15 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+router.get('/users/:id/:firstName/:lastName', function(req, res, next) {
+});
+
+
 router.get('/john', function(req, res, next) {
-  setTimeout(() => {
-    res.json({firstName: 'John'});
-  }, 5000)
-  
+  console.log(req.query)
+  console.log(req.params)
+  console.log(req.body)
+  res.json({firstName: 'John'});  
 });
 
 module.exports = router;
